@@ -14,7 +14,7 @@
     <section class=" hero has-text-centered is-primary is-bold is-fullheight">
 
         <div class="hero-body container">
-            <form action="pages/selectAction/" method="POST">
+            <form action="pages/selectAction/index.php" method="POST">
 
                 <h1 class="title">Watch & Count</h1>
 
@@ -23,8 +23,8 @@
                 <label for="username" class="label">Username:</label>
                 <input type="text" name="user" id="username" class="input">
             
-                <label for="pass" class="label">Password:</label>
-                <input type="password" name="pass" id="pass" class="input">
+                <!-- <label for="pass" class="label">Password:</label> -->
+                <!-- <input type="password" name="pass" id="pass" class="input"> -->
                 <br>
                 <input type="submit" value="Connect" class="button is-link">
 
@@ -43,22 +43,26 @@
 
     <?php
 
-
+        /*
         if (isset($_POST['pass'])) {
+            session_start();
+            $_SESSION["user"] = $_POST["user"];
 
             $username = $_POST['user'];
             $password = $_POST['pass'];
 
             if ($username == 'userTest' && $password == '123') {
-                /* echo "LOGADO"; */
-                header('Location: pages/selectAction/index.php');
+                
+                header('Location: pages/selectAction/index.php',$_SESSION["user"]);
+
+                
             } else {
-                /* echo 'invalido'; */
             }
 
+            
         }
     
-
+        */
     ?>
    
 </body>

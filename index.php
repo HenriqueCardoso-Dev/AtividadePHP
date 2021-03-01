@@ -14,7 +14,7 @@
     <section class=" hero has-text-centered is-primary is-bold is-fullheight">
 
         <div class="hero-body container">
-            <form action="" method="POST">
+            <form action="pages/selectionAction/" method="POST">
 
                 <h1 class="title">Watch & Count</h1>
 

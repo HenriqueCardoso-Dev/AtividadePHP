@@ -27,10 +27,14 @@
             <br>
             <label for="txtP">Passo:</label><br>
             <input type="number" name="txtP" id="txtP" required>
-            <br>
+            <br><br>
             <input id="button" type="submit" value="Contar">
         </form>
-            
+        
+            <br><br>
+            <a href="../selectAction/index.php">
+                <button id="button">Voltar</button>
+            </a>
     </section>
 </body>
 </html>

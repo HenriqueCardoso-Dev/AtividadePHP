@@ -13,23 +13,18 @@
             echo "<h1>Vamos Calcular, ".$_SESSION["user"]."!</h1>";
         ?>
     </header>
+    <section>
+        <?php
+                $base = $_POST["base"];
+                $expo = $_POST["expo"];
 
-    <form action="process.php" method="post">
-        <p>
-            Digite o número da base:
-            <input type="text" name="base">
-        </p>
-        <p>
-            Digite o número do expoente:
-            <input type="text" name="expo">
-        </p>
-        <p>
-            <input type="submit" value="Calcular">
-        </p>
+                require_once "../../functions/powReturn.php";
+                echo powReturn($base,$expo);
+        ?>
 
-        <a href="../../pages/selectAction/index.php">
+        <a href="index.php">
             <button id="button">Voltar</button>
         </a>
-    </form>
+    </section>
 </body>
 </html>

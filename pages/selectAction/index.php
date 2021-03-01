@@ -1,8 +1,8 @@
 <?php
-    echo "Seja Bem-vindo ".$_POST["user"]."<br><br>";
-    
     session_start();
     $_SESSION["user"] = $_POST["user"];
+
+    echo "Seja Bem-vindo ".$_SESSION["user"]."<br><br>";
 ?>
 
 <!DOCTYPE html>
@@ -22,5 +22,10 @@
 
     <p>Calculadora de potência!</p>
     <a href="../powCalculator/index.php"><button>Avançar</button></a><hr>
+
+    <br><br>
+    <a href="../../index.php">
+        <button id="button">Encerrar</button>
+    </a>
 </body>
 </html>

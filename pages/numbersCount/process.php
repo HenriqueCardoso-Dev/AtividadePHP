@@ -9,7 +9,10 @@
 <body>
 
     <header>
-        <h1>Vamos Contar</h1>
+    <?php
+        session_start();
+        echo "<h1>Vamos Contar, ".$_SESSION["user"]."!</h1>";
+    ?>
     </header>
 
     <section>
@@ -18,31 +21,13 @@
 
         <div id="answer">
             <?php
-
                 $txtIni = $_POST["txtIni"];
                 $txtEnd = $_POST["txtEnd"];
                 $txtP = $_POST["txtP"];
                 $count = $txtIni;
 
-                if ($txtIni < $txtEnd) {
-                    
-                    //contagem crescente:
-                    while ($count <= $txtEnd) {
-                        echo "$count \u{1F449}";
-                        $count += $txtP;
-                    }
-                    
-                } else if ($txtIni > $txtEnd) {
-
-                    //contagem regressiva:
-                    while ($count >= $txtEnd) {
-                        echo "$count \u{1F449}";
-                        $count -= $txtP;
-                    }
-
-                } 
-                echo "\u{1F3C1}";
-
+                require_once "../../functions/countReturn.php";
+                echo countReturn($txtIni,$txtEnd,$txtP,$count);
             ?>
         </div>
 

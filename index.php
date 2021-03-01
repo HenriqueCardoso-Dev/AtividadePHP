@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="index-page.scss">
 
-    <title>Document</title>
+    <title>Watch & Count</title>
 </head>
 <body>
     <section class=" hero has-text-centered is-primary is-bold is-fullheight">
@@ -26,7 +26,7 @@
                 <label for="pass" class="label">Password:</label>
                 <input type="password" name="pass" id="pass" class="input">
                 <br>
-                <input type="submit" value="Conect" class="button is-link">
+                <input type="submit" value="Connect" class="button is-link">
 
             </form>
         </div>
@@ -51,6 +51,7 @@
 
             if ($username == 'userTest' && $password == '123') {
                 /* echo "LOGADO"; */
+                header('Location: pages/selectAction/index.php');
             } else {
                 /* echo 'invalido'; */
             }

@@ -54,7 +54,6 @@
             if ($username == 'userTest' && $password == '123') {
                 
                 header('Location: pages/selectAction/index.php',$_SESSION["user"]);
-
                 
             } else {
             }

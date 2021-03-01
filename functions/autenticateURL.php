@@ -12,7 +12,7 @@
 
                 $ifIsPlaylistOrNot = explode('&', $videoYTB[1]);
 
-                $embedPlayer = "<iframe width='560' height='315' src='https://www.youtube.com/embed/$ifIsPlaylistOrNot[0]' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+                $embedPlayer = "<iframe width='560' height='315' src='https://www.youtube.com/embed/$ifIsPlaylistOrNot[0]' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen class='playerYT'></iframe>";
 
                 return $embedPlayer;
             break;

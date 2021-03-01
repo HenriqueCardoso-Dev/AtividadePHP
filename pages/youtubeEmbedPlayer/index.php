@@ -21,7 +21,7 @@
                 <?php
                     session_start();
 
-                    echo "<label for='link' class='label'>".$_SESSION["user"].", insert a Youtube URL</label>";
+                    echo "<label for='link' class='label'>".$_SESSION["user"].", insert a Youtube URL:</label>";
                 ?>
                 
                 <input type="url" name="linkValue" id="link" class="input" placeholder="URL: https://www.example.com">
@@ -51,7 +51,13 @@
         </div>
     </section>
 
-    
+    <footer class="footer">
+        <small>
+            <p class="has-text-centered">
+                <strong>H&K Tech</strong> - all rights reserved &copy;
+            </p>
+        </small>
+    </footer>
     
 </body>
 </html>
